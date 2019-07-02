@@ -27,24 +27,16 @@ public class HomeActivity extends BaseActivity {
         super.onCreate(saveIntent);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
-
-        titleBar.setTitle("打印");
-
-        showToast("进入首页", true);
     }
 
-    @OnClick({R.id.tv_bottom_01, R.id.tv_bottom_02, R.id.tv_bottom_03})
+    @OnClick({R.id.tv_bottom_01, R.id.tv_bottom_02})
     public void clickAction(Button button) {
         switch (button.getId()) {
             case R.id.tv_bottom_01:
-                startActivityForResult(new Intent(HomeActivity.this, BluetoothList.class), 3);
+                startActivity(new Intent(HomeActivity.this, DiviceListActivity.class));
                 break;
             case R.id.tv_bottom_02:
                 startActivity(new Intent(HomeActivity.this, PrintListActivity.class));
-                break;
-            case R.id.tv_bottom_03:
-                startActivity(new Intent(HomeActivity.this, DiviceListActivity.class));
-//                startActivity(new Intent(HomeActivity.this, MainActivity.class));
                 break;
         }
     }
