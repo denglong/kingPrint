@@ -96,7 +96,7 @@ public class MainActivity extends BaseActivity {
 
                     Print.PrintDataInPageMode();
                     Print.ClearPageModePrintAreaData();
-//                    Print.GotoNextLabel();
+                    Print.GotoNextLabel();
                 }
                 catch (Exception e) {
 

@@ -36,7 +36,7 @@ public class HomeActivity extends BaseActivity {
                 startActivity(new Intent(HomeActivity.this, DiviceListActivity.class));
                 break;
             case R.id.tv_bottom_02:
-                startActivity(new Intent(HomeActivity.this, PrintListActivity.class));
+                startActivity(new Intent(HomeActivity.this, MainActivity.class));
                 break;
         }
     }

@@ -1,5 +1,6 @@
 package com.family_doctor.test_demo.activity;
 
+import HPRTAndroidSDK.HPRTPrinterHelper;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
@@ -269,6 +270,7 @@ public class BluetoothList extends BaseActivity implements View.OnClickListener 
                 byte characterFont = 0;
                 Print.SelectCharacterFont(characterFont);
                 Print.LanguageEncode="gb2312";
+                HPRTPrinterHelper.isWriteLog = true;
                 Log.e("--------------", "连接成功");
                 return true;
             }
